@@ -6,16 +6,16 @@ import "./about.css";
 const About = () => {
   return (
     <React.Fragment>
-      <IconContext.Provider value={{ color: "#27ae61", size: "1.8rem" }}>
+      <IconContext.Provider value={{ color: "#fe4000", size: "1.8rem" }}>
         <div className="py-5">
           <div className="container d-flex flex-column">
             <div className="text-center">
-              <h1 className="fw-bolder">
+              <h1 className="fw-bolder text-main">
                 Create your cryptocurrency portfolio today
               </h1>
               <p className="text-muted">
-                CoinSignalPro has a variety of features that make it the best
-                place to start trading
+                PrimeFund has a variety of features that make it the best place
+                to start trading
               </p>
             </div>
             <div className="grid mt-4">

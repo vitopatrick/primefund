@@ -1,82 +1,46 @@
-import React, { useState } from "react";
-import { Tabs, Tab, Box } from "@mui/material";
-import "./plan.css";
-import BasicPlan from "./BasicPlan";
-import BronzePlan from "./BronzePlan";
-import SliverPlan from "./SliverPlan";
-import GoldPlan from "./GoldPlan";
-import PlatinumPlan from "./PlatinumPlan";
-
-const TabPanel = ({ children, value, index }) => {
-  return <Box>{value === index && <Box sx={{ p: 3 }}>{children}</Box>}</Box>;
-};
+import React from "react";
+import { Link } from "react-router-dom";
+import { plans } from "./plans";
 
 const Plan = () => {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <>
       <div className="plan">
         <div className="plan__container">
           <div className="plan__title">
-            <h1 className="fw-bolder">Choose your Prefered Plan</h1>
-            <p>
+            <h1 className="fw-bolder text-main text-center">
+              Choose your Prefered Plan
+            </h1>
+            <p className="text-muted text-center">
               Choose your plans and increase your mining speed and make more
               coins!
             </p>
           </div>
+          <div className="row my-5">
+            {plans.map((plan) => (
+              <div className="col-sm-12 col-md-6 col-lg-4 my-sm-4">
+                <div className="d-flex flex-column align-items-center">
+                  <div className="my-4">
+                    <h3 className="fw-bolder text-uppercase">{plan.name}</h3>
+                  </div>
+                  <div className="mb-3">
+                    <h1 className="text-muted fs-1 fw-bolder">{`$${plan.amt}`}</h1>
+                  </div>
+                  <div className="mb-3 text-center w-50 mx-auto">
+                    <h5>Account for:</h5>
+                    <p className="mt-2">{plan.about}</p>
+                  </div>
+                  <div>
+                    <Link to="/register" className="start__cta">
+                      Open {plan.name} Account
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <Box>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-          centered
-        >
-          <Tab
-            label="Basic"
-            sx={{ color: "#000", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Bronze"
-            sx={{ color: "#000", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Sliver"
-            sx={{ color: "#000", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Gold"
-            sx={{ color: "#000", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Platinum"
-            sx={{ color: "#000", textTransform: "uppercase" }}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <BasicPlan />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <BronzePlan />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <SliverPlan />
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <GoldPlan />
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <PlatinumPlan />
-      </TabPanel>
     </>
   );
 };

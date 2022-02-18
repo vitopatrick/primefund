@@ -69,6 +69,7 @@ const Layout = (props) => {
       <CssBaseline />
       <AppBar
         position="fixed"
+        color="primary"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
@@ -89,9 +90,9 @@ const Layout = (props) => {
             noWrap
             component="h1"
             onClick={goHome}
-            sx={{ p: 1, color: "#198754", cursor: "pointer" }}
+            sx={{ p: 1, color: "#fff", cursor: "pointer", fontWeight: "700" }}
           >
-            CoinSignalPro
+            PrimeFund
           </Typography>
         </Toolbar>
       </AppBar>

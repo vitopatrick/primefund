@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="container">
           <Link to="/">
             <div className="img-res">
-              <h1 className="title">CoinSignalPro</h1>
+              <h1 className="title">Primefund</h1>
             </div>
           </Link>
           <div>
@@ -56,16 +56,10 @@ const Navbar = () => {
             <Link to="/contact" className="my-2   w-100 text-white text-sec">
               Contact
             </Link>
-            <Link
-              to="/register"
-              className="my-2 w-100 btn btn-success text-white text-sec "
-            >
+            <Link to="/register" className="my-2   text-main">
               Begin Here
             </Link>
-            <Link
-              to="/login"
-              className="my-2 btn btn-outline-success w-100 text-white text-sec"
-            >
+            <Link to="/login" className="my-2  text-main">
               Sign In
             </Link>
           </div>

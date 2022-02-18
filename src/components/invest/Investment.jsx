@@ -1,15 +1,11 @@
-import React, { useContext, useState } from "react";
-import { Typography, Box, Tabs, Tab } from "@mui/material";
-import { basicPlan } from "../Plans/basic";
-import { bronzePlan } from "../Plans/bronze";
-import { sliverPlan } from "../Plans/sliver";
-import { goldPlan } from "../Plans/gold";
-import { platinumPlan } from "../Plans/platinum";
+import React, { useContext } from "react";
+import { Typography, Box, Button } from "@mui/material";
 import { getDoc, doc, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { store } from "../../firebase";
 import { toast } from "react-toastify";
 import { UserContext } from "../../context/UserContext";
+import { plans } from "../Plans/plans";
 
 const Investment = () => {
   toast.configure();
@@ -17,12 +13,6 @@ const Investment = () => {
   const navigate = useNavigate();
 
   const { user } = useContext(UserContext);
-
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   const addInvestment = async (amount, plan) => {
     try {
@@ -57,10 +47,6 @@ const Investment = () => {
     }
   };
 
-  const TabPanel = ({ children, value, index }) => {
-    return <Box>{value === index && <Box sx={{ p: 3 }}>{children}</Box>}</Box>;
-  };
-
   return (
     <>
       <Box>
@@ -69,171 +55,34 @@ const Investment = () => {
         </Typography>
       </Box>
       <Box>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          centered
-          variant="scrollable"
-          scrollButtons
-          allowScrollButtonsMobile
-        >
-          <Tab
-            label="Basic"
-            sx={{ color: "#fff", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Bronze"
-            sx={{ color: "#fff", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Sliver"
-            sx={{ color: "#fff", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Gold"
-            sx={{ color: "#fff", textTransform: "uppercase" }}
-          />
-          <Tab
-            label="Platinum"
-            sx={{ color: "#fff", textTransform: "uppercase" }}
-          />
-        </Tabs>
+        <div className="row my-5">
+          {plans.map((plan) => (
+            <div className="col-sm-12 col-md-6 col-lg-4 my-sm-4">
+              <div className="d-flex flex-column align-items-center">
+                <div className="my-4">
+                  <h3 className="fw-bolder text-uppercase">{plan.name}</h3>
+                </div>
+                <div className="mb-3">
+                  <h1 className="text-muted fs-1 fw-bolder">{`$${plan.amt}`}</h1>
+                </div>
+                <div className="mb-3 text-center w-50 mx-auto">
+                  <h5>Account for:</h5>
+                  <p className="mt-2">{plan.about}</p>
+                </div>
+                <div>
+                  <Button
+                    onClick={() => addInvestment(plan.amt, plan.plan)}
+                    className="start__cta"
+                    variant="contained"
+                  >
+                    Open {plan.name} Account
+                  </Button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </Box>
-      <TabPanel value={value} index={0}>
-        <div>
-          <div className="row">
-            {basicPlan.map((plan) => (
-              <div className="col-sm-12 col-md-3 col-lg-3 " key={plan.id}>
-                <div className="plan__card p-5 shadow">
-                  <div>
-                    <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
-                  </div>
-                  <div className="plan-reward">
-                    <p>Reward:{`$${plan.reward}`}</p>
-                    <p>Duration:{plan.duration}</p>
-                  </div>
-                  <div className="my-4">
-                    <button
-                      className="btn btn-success"
-                      onClick={() => addInvestment(plan.invest, "Basic")}
-                    >
-                      Start Now !!
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <div>
-          <div className="row">
-            {bronzePlan.map((plan) => (
-              <div className="col-sm-12 col-md-3 col-lg-3 " key={plan.id}>
-                <div className="plan__card p-5 shadow">
-                  <div>
-                    <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
-                  </div>
-                  <div className="plan-reward">
-                    <p>Reward:{`$${plan.reward}`}</p>
-                    <p>Duration:{plan.duration}</p>
-                  </div>
-                  <div className="my-4">
-                    <button
-                      className="btn btn-success "
-                      onClick={() => addInvestment(plan.invest, "Bronze")}
-                    >
-                      Start Now !!{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <div>
-          <div className="row">
-            {sliverPlan.map((plan) => (
-              <div className="col-sm-12 col-md-3 col-lg-3 " key={plan.id}>
-                <div className="plan__card p-5 shadow">
-                  <div>
-                    <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
-                  </div>
-                  <div className="plan-reward">
-                    <p>Reward:{`$${plan.reward}`}</p>
-                    <p>Duration:{plan.duration}</p>
-                  </div>
-                  <div className="my-4">
-                    <button
-                      className="btn btn-success text-sec"
-                      onClick={() => addInvestment(plan.invest, "Sliver")}
-                    >
-                      Start Now !!{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        <div>
-          <div className="row">
-            {goldPlan.map((plan) => (
-              <div className="col-sm-12 col-md-4 col-lg-4 mt-3 " key={plan.id}>
-                <div className="plan__card p-5 shadow">
-                  <div>
-                    <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
-                  </div>
-                  <div className="plan-reward">
-                    <p>Reward:{`$${plan.reward}`}</p>
-                    <p>Duration:{plan.duration}</p>
-                  </div>
-                  <div className="my-4">
-                    <button
-                      className="btn btn-success text-sec"
-                      onClick={() => addInvestment(plan.invest, "Gold")}
-                    >
-                      Start Now !!{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        <div>
-          <div className="row">
-            {platinumPlan.map((plan) => (
-              <div className="col-sm-12 col-md-4 col-lg-4 mt-3 " key={plan.id}>
-                <div className="plan__card p-5 shadow">
-                  <div>
-                    <h1 className="fw-bolder fs-1">{`$${plan.invest}`}</h1>
-                  </div>
-                  <div className="plan-reward">
-                    <p>Reward:{`$${plan.reward}`}</p>
-                    <p>Duration:{plan.duration}</p>
-                  </div>
-                  <div className="my-4">
-                    <button
-                      className="btn btn-success text-sec"
-                      onClick={() => addInvestment(plan.invest, "Platinum")}
-                    >
-                      Start Now !!{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </TabPanel>
     </>
   );
 };

@@ -1,35 +1,39 @@
 import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
-  palette: {
-    mode: "dark",
-  },
   typography: {
-    subtitle1: {
-      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
+    fontFamily: ["Jost", "sans-serif"].join(","),
+  },
+  components: {
+    MuiAppBar: {
+      styleOverrides: {
+        colorPrimary: {
+          backgroundColor: "#fe4000",
+        },
+      },
     },
-    body1: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+    MuiDrawer: {
+      styleOverrides: {
+        paper: {
+          backgroundColor: "#fe4000",
+          color: "#fff",
+        },
+      },
     },
-    h6: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "capitalize",
+          backgroundColor: "#fe4000",
+        },
+      },
     },
-    h5: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-    },
-    h3: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-    },
-    h4: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-      fontWeight: "bolder",
-    },
-    caption: {
-      fontFamily: ["Nunito", "sans-serif"].join(","),
-    },
-    button: {
-      fontFamily: ["Josefin Sans", "sans-serif"].join(","),
-      textTransform: "lowercase",
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          borderColor: "#fe4000",
+        },
+      },
     },
   },
 });

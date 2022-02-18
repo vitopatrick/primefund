@@ -11,31 +11,31 @@ export const links = [
   {
     text: "Dashboard",
     path: "/dashboard",
-    icon: <MdDashboard size="18px" />,
+    icon: <MdDashboard color="#fff" />,
   },
   {
     text: "Account Settings",
     path: "/account",
-    icon: <MdAccountCircle />,
+    icon: <MdAccountCircle color="#fff" />,
   },
   {
     text: "Deposit",
     path: "/deposit",
-    icon: <MdPayment />,
+    icon: <MdPayment color="#fff" />,
   },
   {
     text: "Invest",
     path: "/invest",
-    icon: <MdDownload />,
+    icon: <MdDownload color="#fff" />,
   },
   {
     text: "Withdraw",
     path: "/withdraw",
-    icon: <MdCreditScore />,
+    icon: <MdCreditScore color="#fff" />,
   },
   {
     text: "Transactions",
     path: "/transactions",
-    icon: <MdBusinessCenter />,
+    icon: <MdBusinessCenter color="#fff" />,
   },
 ];

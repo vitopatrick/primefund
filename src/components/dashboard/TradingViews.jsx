@@ -40,7 +40,7 @@ const TradingViews = () => {
       <Box sx={{ mt: 4 }}>
         <AdvancedChart
           widgetProps={{
-            theme: "dark",
+            theme: "light",
             height: "500px",
             allow_symbol_change: "true",
           }}
@@ -48,7 +48,7 @@ const TradingViews = () => {
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography variant="caption" textAlign="center">
-          CoinSignalPro © 2022
+          primefund © 2022
         </Typography>
       </Box>
     </div>

@@ -11,7 +11,7 @@ const Form = () => {
         </div>
         <div className="contact__form">
           <div className="contact__form-title mt-1">
-            <h1>Let us here your complain</h1>
+            <h1 className="text-main fw-bolder">Let us here your complain</h1>
           </div>
           <div className="contact__form-grid">
             <div className="form__group">
@@ -32,7 +32,7 @@ const Form = () => {
             <textarea name="message"></textarea>
           </div>
           <div>
-            <button className="form__btn">Send</button>
+            <button className="start__cta btn btn-block">Send</button>
           </div>
         </div>
       </div>
