@@ -15,7 +15,7 @@ const Hero = () => {
         }}
       >
         <div className="hero__overlay">
-          <div className="w-75 mx-auto my-4">
+          <div className="w-75 mx-auto my-2">
             <div className="my-5">
               <h1 className="text-white fw-bolder fs-1">
                 TRADING MADE SMOOTHER
