@@ -16,7 +16,7 @@ const Hero = () => {
       >
         <div className="hero__overlay">
           <div className="w-75 mx-auto my-2">
-            <div className="my-5">
+            <div className="mt-5 mb-3">
               <h1 className="text-white fw-bolder fs-1">
                 TRADING MADE SMOOTHER
               </h1>
@@ -29,7 +29,7 @@ const Hero = () => {
                 tight spreads, low commission and negative balance protection.
               </p>
             </div>
-            <div>
+            <div className="mb-3">
               <Link to="/register" className="bg-main px-5 py-2 rounded">
                 Start Trading Now
               </Link>
