@@ -9,6 +9,7 @@ import Plan from "../components/Plans/Plan";
 import Reason from "../components/Reason/Reason";
 import Start from "../components/Start/Start";
 import Work from "../components/Work/Work";
+import Ticker from "../components/Ticker/Ticker";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ const Home = () => {
   return (
     <React.Fragment>
       <Header />
+      <Ticker />
       <About />
       <Start />
       <Work />
@@ -42,7 +44,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <script src="//code.tidio.co/ew3ahfnv9qicewy1mcs8baio6nn5nslt.js" async></script> */
-}
