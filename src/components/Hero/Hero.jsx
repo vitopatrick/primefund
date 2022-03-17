@@ -8,7 +8,7 @@ const Hero = () => {
       <div
         className="hero"
         style={{
-          backgroundImage: "url(/img/animation1.gif)",
+          backgroundImage: "url(/img/bg-animation.gif)",
           height: "84vh",
           position: "relative",
           backgroundSize: "cover",
