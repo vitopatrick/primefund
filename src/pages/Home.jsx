@@ -10,6 +10,7 @@ import Reason from "../components/Reason/Reason";
 import Start from "../components/Start/Start";
 import Work from "../components/Work/Work";
 // import Ticker from "../components/Ticker/Ticker";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -36,6 +37,7 @@ const Home = () => {
       <Work />
       <Reason />
       <Plan />
+      <Testimonials />
       <Newsletter />
       <Footer />
     </React.Fragment>
