@@ -9,7 +9,7 @@ const Hero = () => {
         className="hero"
         style={{
           backgroundImage: "url(/img/animation1.gif)",
-          height: "70vh",
+          height: "84vh",
           position: "relative",
           backgroundSize: "cover",
           backgroundPosition: "center",

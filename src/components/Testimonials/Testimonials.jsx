@@ -43,7 +43,7 @@ const Testimonials = () => {
       <div>
         <h2 className="text-center fw-bolder fs-1"> Testimonials</h2>
         <p className="text-muted text-center">
-          here what other people have to say about us
+          here is what other people have to say about us.
         </p>
         <Slider {...settings}>
           {testimonials.map((testimony) => (
