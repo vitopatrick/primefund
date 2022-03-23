@@ -24,7 +24,7 @@ const Home = () => {
 
     const script = document.createElement("script");
     script.async = true;
-    script.src = "//code.tidio.co/wx2oo7kg6zqrdnmsl6utqwqhjpsqg20i.js";
+    script.src = "//code.tidio.co/xkwyhezl69rdd051tloqj9yrhubbwm83.js";
 
     document.body.appendChild(script);
   }, []);
