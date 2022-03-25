@@ -53,26 +53,26 @@ const Withdrawal = () => {
       );
 
       if (!addressRef.current.value) {
-        toast.error("Please Fill out the correct form", {
+        return toast.error("Please Fill out the correct form", {
           theme: "colored",
           position: "bottom-center",
         });
+      } else {
+        await addDoc(collectionRef, {
+          method: value,
+          address: addressRef.current.value,
+          amount: amt,
+          approved: false,
+          date: serverTimestamp(),
+        });
+
+        toast.success("Request Submitted", {
+          theme: "colored",
+          position: "top-center",
+        });
+
+        navigate("/dashboard");
       }
-
-      await addDoc(collectionRef, {
-        method: value,
-        address: addressRef.current.value,
-        amount: amt,
-        approved: false,
-        date: serverTimestamp(),
-      });
-
-      toast.success("Request Submitted", {
-        theme: "colored",
-        position: "top-center",
-      });
-
-      navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }

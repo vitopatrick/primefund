@@ -6,14 +6,13 @@ import { getStorage } from "firebase/storage";
 // this will be hidden in an envirnoment variable
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAS4GkIWlrhCYgdQduP68MzbVvY6_FRhLw",
-  authDomain: "investment-site.firebaseapp.com",
-  projectId: "investment-site",
-  storageBucket: "investment-site.appspot.com",
-  messagingSenderId: "353822051324",
-  appId: "1:353822051324:web:44d643f171a22cc9d60079",
+  apiKey: "AIzaSyBAK0qoaOnziw5-QKrfVfZL-nF_43dS3CM",
+  authDomain: "primeinvestments-a7c0c.firebaseapp.com",
+  projectId: "primeinvestments-a7c0c",
+  storageBucket: "primeinvestments-a7c0c.appspot.com",
+  messagingSenderId: "103839984055",
+  appId: "1:103839984055:web:dba2170875c565aab0e032",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
