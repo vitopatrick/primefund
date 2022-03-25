@@ -27,7 +27,7 @@ const Address = () => {
             </div>
             <div>
               <h1 className="fs-4">Email</h1>
-              <p>info@Primefund.co</p>
+              <p>contactprimefund@gmail.com</p>
             </div>
           </div>
           <div className="address__card">

@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3 className="fw-bolder text-main">Contact Info</h3>
-              <p>info@primefund.co</p>
+              <p>contactprimefund@gmail.com</p>
               <p>
                 primefund Head office US: 2944 N 44th Street,Phoenix,AZ 85018
               </p>
