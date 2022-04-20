@@ -11,19 +11,19 @@ import btccLogo from "../../img/btcc.png";
 export const wallets = [
   {
     coin: "Bitcoin",
-    address: "bc1qy8kft7njld50evtrcej0ukk2y06rzk8ey4r8pv",
+    address: "bc1qmdvsv240d2l2mp3s3vxleskz2evtn4eev5hjmp",
     addressName: "BTC Address",
     icon: BtcLogo,
   },
   {
     coin: "Ethereum ",
-    address: "0x7dDD74c3e4F9c1d3078261D34c0F1f945D4291c1",
+    address: "0x2D16b7aF0E55De8a636a46c3a1291E6103cf1253",
     addressName: "ETH Address:",
     icon: ethLogo,
   },
   {
     coin: "Litecoin",
-    address: "ltc1qeld7q7459rns4us209vpwq55nxgpd7jx70vjrm",
+    address: "3Az8YgxLufx1TbPVJCa49NGHxQfiysyG2V",
     addressName: "LTC Address",
     icon: ltcLogo,
   },
@@ -41,25 +41,25 @@ export const wallets = [
   },
   {
     coin: "DOGE ",
-    address: "DCaLx2QdSgZouxWicvXfZ72XB8NwDyzJbL",
+    address: "A56Hcny7YweBaqZWFmxe1qtRQXGBiEJ719",
     addressName: "Dogecoin Address",
     icon: dogeLogo,
   },
   {
     coin: "TRON ",
-    address: "TNBAZ5yWsB6ZSgRnHAZdSTC6WMzxmKtGNe",
+    address: "TYLun9myZQBVpkAM3K8dD6dZUkRfDCf1Pw",
     addressName: "TRON Address",
     icon: tronLogo,
   },
   {
     coin: "SHIBA ERC20",
-    address: "0x09a4Ef878099a7891881B83EA9D1F5bec63A0B41",
+    address: "0xacd0bd8ea5d183599b99efc516e168c08df9da2b",
     addressName: "SHIBA Address",
     icon: shibaLogo,
   },
   {
     coin: "BITCOIN CASH",
-    address: "qrc4t9xs3ntgrp67t6wyjhrna27k4yq62vkn0du8yp",
+    address: "31p59YfTJidQt79qe5CJvAvXSZwHqNPQzG",
     addressName: "BCH Address",
     icon: btccLogo,
   },
