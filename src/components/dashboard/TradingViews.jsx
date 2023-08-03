@@ -48,7 +48,7 @@ const TradingViews = () => {
       </Box>
       <Box sx={{ mt: 4 }}>
         <Typography variant="caption" textAlign="center">
-          primefund © 2022
+          primemarkets © 2022
         </Typography>
       </Box>
     </div>

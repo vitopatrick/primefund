@@ -34,9 +34,9 @@ const Footer = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 d-flex flex-column mb-5">
               <h3 className="fw-bolder text-main">Contact Info</h3>
-              <p>contactprimefund@gmail.com</p>
+              <p>contactprimemarkets@gmail.com</p>
               <p>
-                primefund Head office US: 2944 N 44th Street,Phoenix,AZ 85018
+                primemarkets Head office US: 2944 N 44th Street,Phoenix,AZ 85018
               </p>
               <p>
                 UK:First Floor ,Omega Building,Smugglers Way,Wandsworth,SW18
@@ -62,7 +62,7 @@ const Footer = () => {
           </div> */}
           <div className="text-center mt-3">
             <p>
-              COPYRIGHT © RESVERED primefund 2014 -{" "}
+              COPYRIGHT © RESVERED primemarkets 2014 -{" "}
               {moment(new Date()).format("YYYY")}
             </p>
           </div>

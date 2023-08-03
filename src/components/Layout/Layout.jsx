@@ -92,7 +92,7 @@ const Layout = (props) => {
             onClick={goHome}
             sx={{ p: 1, color: "#fff", cursor: "pointer", fontWeight: "700" }}
           >
-            PrimeFund
+            primemarkets
           </Typography>
         </Toolbar>
       </AppBar>

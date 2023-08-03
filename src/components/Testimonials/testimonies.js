@@ -15,13 +15,13 @@ export const testimonials = [
   },
   {
     id: 3,
-    testimony: "Primefund is the best in all crypto services",
+    testimony: "primemarkets is the best in all crypto services",
     author: "gray fisher",
     title: "Investor/Miner",
   },
   {
     id: 4,
-    testimony: "i use primefund for any crypto investment",
+    testimony: "i use primemarkets for any crypto investment",
     author: "Jack",
     title: "investor/Miner",
   },

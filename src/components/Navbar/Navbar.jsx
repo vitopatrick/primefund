@@ -15,7 +15,7 @@ const Navbar = () => {
         <div className="container">
           <Link to="/">
             <div className="img-res">
-              <h1 className="title">Primefund</h1>
+              <h1 className="title">primemarkets</h1>
             </div>
           </Link>
           <div>

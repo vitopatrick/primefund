@@ -45,7 +45,7 @@ const TransactionTabs = () => {
       </Panel>
       <Box sx={{ mt: 10 }}>
         <Typography variant="caption">
-          All Rights Reserved © Primefund 2022
+          All Rights Reserved © primemarkets 2023
         </Typography>
       </Box>
     </Box>

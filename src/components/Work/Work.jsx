@@ -12,7 +12,7 @@ const Work = () => {
             <h1 className="fw-bolder text-main">
               Start Trading Live in Few Minutes
             </h1>
-            <p>Primefund supports a wide Range of cryptocurrency</p>
+            <p>primemarkets supports a wide Range of cryptocurrency</p>
           </div>
           <div className="work__grid">
             <div className="work__card">
